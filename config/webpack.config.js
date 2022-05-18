@@ -25,6 +25,7 @@ const ForkTsCheckerWebpackPlugin =
     ? require("react-dev-utils/ForkTsCheckerWarningWebpackPlugin")
     : require("react-dev-utils/ForkTsCheckerWebpackPlugin");
 const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
+const SentryWebpackPlugin = require("@sentry/webpack-plugin");
 
 const createEnvironmentHash = require("./webpack/persistentCache/createEnvironmentHash");
 
@@ -564,6 +565,14 @@ module.exports = function (webpackEnv) {
       ].filter(Boolean),
     },
     plugins: [
+      new SentryWebpackPlugin({
+        authToken: process.env.REACT_APP_SENTRY_AUTH_TOKEN,
+        org: "adamrudolph",
+        project: "adamrudolph",
+        include: "build",
+        configFile: "sentry.properties",
+        release: process.env.REACT_APP_SENTRY_RELEASE,
+      }),
       // Generates an `index.html` file with the <script> injected.
       new HtmlWebpackPlugin(
         Object.assign(

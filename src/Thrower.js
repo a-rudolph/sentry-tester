@@ -2,8 +2,10 @@ export default function Thrower() {
   const thrower = () => {
     const obj = {};
 
-    console.log(obj.foo());
+    const bar = obj.bar;
+
+    console.log(obj.foo(bar));
   };
 
-  return <button onClick={thrower}>throw me! V2</button>;
+  return <button onClick={thrower}>throw me! V3</button>;
 }
