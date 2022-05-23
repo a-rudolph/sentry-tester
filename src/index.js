@@ -6,7 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import * as Sentry from "@sentry/react";
 
 Sentry.init({
-  dsn: "https://a09e8d83e9cb4cc78f2462655f1fce23@o490230.ingest.sentry.io/5553784",
+  dsn: process.env.REACT_APP_SENTRY_DSN,
   integrations: [],
 
   // We recommend adjusting this value in production, or using tracesSampler
