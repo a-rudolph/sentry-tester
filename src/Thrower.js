@@ -4,6 +4,8 @@ export default function Thrower() {
 
     const bar = obj.bar;
 
+    const foo = bar;
+    // testing hidden-source-map
     console.log(obj.foo(bar));
   };
 

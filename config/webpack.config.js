@@ -196,7 +196,7 @@ module.exports = function (webpackEnv) {
     bail: isEnvProduction,
     devtool: isEnvProduction
       ? shouldUseSourceMap
-        ? "source-map"
+        ? "hidden-source-map"
         : false
       : isEnvDevelopment && "cheap-module-source-map",
     // These are the "entry points" to our application.
@@ -568,7 +568,7 @@ module.exports = function (webpackEnv) {
       new SentryWebpackPlugin({
         authToken: process.env.REACT_APP_SENTRY_AUTH_TOKEN,
         org: "adamrudolph",
-        project: "adamrudolph",
+        project: process.env.REACT_APP_SENTRY_PROJECT,
         include: "build",
         configFile: "sentry.properties",
         release: process.env.REACT_APP_SENTRY_RELEASE,
