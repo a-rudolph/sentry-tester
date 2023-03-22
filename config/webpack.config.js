@@ -565,7 +565,7 @@ module.exports = function (webpackEnv) {
       ].filter(Boolean),
     },
     plugins: [
-      new SentryWebpackPlugin({
+      process.env.REACT_APP_SENTRY_AUTH_TOKEN && new SentryWebpackPlugin({
         authToken: process.env.REACT_APP_SENTRY_AUTH_TOKEN,
         org: "adamrudolph",
         project: process.env.REACT_APP_SENTRY_PROJECT,
