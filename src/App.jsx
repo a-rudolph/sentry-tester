@@ -12,6 +12,7 @@ function App() {
           <Thrower />
         </p>
         <h3>Sentry logging!</h3>
+        <h3>with Vite!</h3>
       </header>
     </div>
   );
