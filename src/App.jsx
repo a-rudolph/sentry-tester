@@ -1,3 +1,4 @@
+import React from "react";
 import Thrower from "./Thrower";
 import logo from "./logo.svg";
 import "./App.css";
