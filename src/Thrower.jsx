@@ -11,5 +11,5 @@ export default function Thrower() {
     console.log(obj.foo(bar));
   };
 
-  return <button onClick={thrower}>throw me! V3</button>;
+  return <button onClick={thrower}>throw me!</button>;
 }
