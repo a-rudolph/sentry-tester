@@ -11,7 +11,7 @@ export default defineConfig(({ command, mode }) => {
 
   return {
     build: {
-      sourcemap: true, // Source map generation must be turned on
+      sourcemap: "hidden", // Source map generation must be turned on
     },
     plugins: [
       react(),
