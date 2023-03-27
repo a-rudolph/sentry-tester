@@ -20,7 +20,7 @@ export default defineConfig(({ command, mode }) => {
       // Put the Sentry vite plugin after all other plugins
       sentryVitePlugin({
         org: "adamrudolph",
-        project: "adamrudolph",
+        project: "vite-react",
 
         // Specify the directory containing build artifacts
         include: "./dist",
